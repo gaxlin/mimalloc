@@ -1,0 +1,2145 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		29E459CFBA794E9A93D7709D /* RUN_TESTS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F122E5C6B09E43269568C568 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */;
+			buildPhases = (
+				A57B57E6344944F98C412A0F /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+			);
+			name = RUN_TESTS;
+			productName = RUN_TESTS;
+		};
+		3952842709364435A8CE7DC3 /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E86A7B57CB974B4283D7D1C1 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				9C3F50362CAB45A5BBA345F9 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				99F22972FA3C401FADD0D974 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		657F62F70B354AFEAA6D839C /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D88530BDA4664C5386B34FC8 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				035795E88BEC401C8F180730 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		9B8020779E244245968E59C0 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = FBDBBDE4342A44EA829E27AA /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				508FDB3C21864B1F82E38A57 /* CMake Rules */,
+			);
+			dependencies = (
+				62930BC2CDBF4DABBC32FEF9 /* PBXTargetDependency */,
+				EC49FBA8BD4C434AACB24618 /* PBXTargetDependency */,
+				A5D1A366123446FC920337C9 /* PBXTargetDependency */,
+				A8B55C91F6064060B3AAD2CC /* PBXTargetDependency */,
+				48F7E9D717E84EF78A3A789F /* PBXTargetDependency */,
+				B49ED9B084B541708DE18F83 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		067382A8F7A940D88D944A57 /* heap.c in Sources */ = {isa = PBXBuildFile; fileRef = A795849F919B431C992EF30C /* heap.c */; };
+		17AECA0ABB074609AFD75FBF /* region.c in Sources */ = {isa = PBXBuildFile; fileRef = BE9EFD776E3C4A8D8BE64DF6 /* region.c */; };
+		18F3F76787B4439298E9121A /* arena.c in Sources */ = {isa = PBXBuildFile; fileRef = 7924F72A6EA84B009BC900E2 /* arena.c */; };
+		224100BBB4854AC0818B24F1 /* bitmap.c in Sources */ = {isa = PBXBuildFile; fileRef = CF5BD3BFE6624C678E994EE7 /* bitmap.c */; };
+		239E755FCA0B449BB3B6C63E /* init.c in Sources */ = {isa = PBXBuildFile; fileRef = 6584EF960AB0473D8BCDE5CC /* init.c */; };
+		28A18118F7994830AC34576F /* alloc-aligned.c in Sources */ = {isa = PBXBuildFile; fileRef = 1E12A72FEF124C4C81437AD6 /* alloc-aligned.c */; };
+		2904F308E11D4CA0914CD84E /* alloc-override-osx.c in Sources */ = {isa = PBXBuildFile; fileRef = 61E40D6B4E91429F88C9CB06 /* alloc-override-osx.c */; };
+		2ED220B50F3D47D781C620BC /* static.c in Sources */ = {isa = PBXBuildFile; fileRef = 69AB6572064D46BF895B466A /* static.c */; };
+		2F6A0A11DD97409680708BDB /* alloc-override-osx.c in Sources */ = {isa = PBXBuildFile; fileRef = 47A053CE7BFD4507A655323A /* alloc-override-osx.c */; };
+		4D59AFEDE00C451AAF9754E2 /* os.c in Sources */ = {isa = PBXBuildFile; fileRef = 865B1AEDCCC94EB4885852F2 /* os.c */; };
+		52768CC6A5AE4B1F8C4B5EDC /* stats.c in Sources */ = {isa = PBXBuildFile; fileRef = B7F22160943E46918B1468CE /* stats.c */; };
+		52840D4F3D9849B4B490E23B /* os.c in Sources */ = {isa = PBXBuildFile; fileRef = FFF114029E584B3FB1DC3F55 /* os.c */; };
+		651840D8AEF5423DAC202140 /* alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = A67FDAE9A9E74A15A8803AA5 /* alloc.c */; };
+		698092E164EF4C7F9732421B /* page.c in Sources */ = {isa = PBXBuildFile; fileRef = 0ECD7153AB454A2389004EBD /* page.c */; };
+		768F3F6342774145886907D8 /* test-api.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F1A8C3838440B8A530EEE /* test-api.c */; };
+		7690BA7B4DCE41A1BDD2761E /* arena.c in Sources */ = {isa = PBXBuildFile; fileRef = 3DED8F0FD8A64644BE88948F /* arena.c */; };
+		828E4B0BE7AF4EA0A0A8147C /* alloc-posix.c in Sources */ = {isa = PBXBuildFile; fileRef = 48DBAC4A517D45739DDFC2E5 /* alloc-posix.c */; };
+		83457BA17BC04748A658925F /* region.c in Sources */ = {isa = PBXBuildFile; fileRef = 04922FF37987438C9DE86A15 /* region.c */; };
+		9AD1C575C7DB4F8087DA260B /* segment.c in Sources */ = {isa = PBXBuildFile; fileRef = 941EFE1B196D41DC9883D7F3 /* segment.c */; };
+		B7BFCE054F0A4CC8B8F03212 /* stats.c in Sources */ = {isa = PBXBuildFile; fileRef = 7876B561B74A41D481232BD8 /* stats.c */; };
+		C34AED873D724FDCBAFC55DC /* init.c in Sources */ = {isa = PBXBuildFile; fileRef = BAC9BF06360C4F1E8D1E00AB /* init.c */; };
+		CD86BEE0AFCD46E4A996E643 /* alloc-aligned.c in Sources */ = {isa = PBXBuildFile; fileRef = 367538D16328416EB840D16F /* alloc-aligned.c */; };
+		D3B005AAC2394FF09C2F5CE4 /* options.c in Sources */ = {isa = PBXBuildFile; fileRef = 53545280CE0D410DBBC02E9A /* options.c */; };
+		DA00C89BE22943C18D14743B /* page.c in Sources */ = {isa = PBXBuildFile; fileRef = D2DED32BD13A4AB0BB45A1DE /* page.c */; };
+		DBC200CC0BAF4DA0A57F7B34 /* options.c in Sources */ = {isa = PBXBuildFile; fileRef = 48693B08BE8444EAB143696F /* options.c */; };
+		E5F85B0EBFDE410DA211D5F9 /* random.c in Sources */ = {isa = PBXBuildFile; fileRef = 28D033E14C074DB1AAF59879 /* random.c */; };
+		E729BE493F1748D58407F2C3 /* random.c in Sources */ = {isa = PBXBuildFile; fileRef = EFBD90B676AE43339D80F7EA /* random.c */; };
+		EFF78FF544D245E1934BC1F1 /* test-stress.c in Sources */ = {isa = PBXBuildFile; fileRef = 7DCCD2104DCA4506A022D924 /* test-stress.c */; };
+		F05949B5F30B47ED871FEBBB /* bitmap.c in Sources */ = {isa = PBXBuildFile; fileRef = 88084749B75246CAB323DFF5 /* bitmap.c */; };
+		F29202C5BAD549A2AC231C6A /* alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 8BCB567E9A9541D89A581057 /* alloc.c */; };
+		F359D07C19C34A73B8F11F88 /* alloc-posix.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EEE514F1DF94EBDA75E323B /* alloc-posix.c */; };
+		F962EE9DE3A24FF28B00AA85 /* segment.c in Sources */ = {isa = PBXBuildFile; fileRef = CE4A17DB4356483AA0B72330 /* segment.c */; };
+		FD779B93316947C984AD2562 /* heap.c in Sources */ = {isa = PBXBuildFile; fileRef = AF1332EB64644F95906FC0C9 /* heap.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0C8C3B931BB34583B8CA9079 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8223CA49F66F4A6BB7842DFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49600E482EC5428EBE3A4DA6;
+			remoteInfo = "mimalloc-test-api";
+		};
+		2F7FB8F86F4345BD93201E80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8223CA49F66F4A6BB7842DFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A49C18726146486CA173BD95;
+			remoteInfo = "mimalloc-test-stress";
+		};
+		48508338A16E4786BDF47D2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8223CA49F66F4A6BB7842DFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 657F62F70B354AFEAA6D839C;
+			remoteInfo = ZERO_CHECK;
+		};
+		5C9A86F030F04A859C2DE317 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8223CA49F66F4A6BB7842DFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 657F62F70B354AFEAA6D839C;
+			remoteInfo = ZERO_CHECK;
+		};
+		5F099C2B9C3841E79DAC00A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8223CA49F66F4A6BB7842DFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB0737E1BF4A427DAA458A6E;
+			remoteInfo = "mimalloc-static";
+		};
+		7B591AD5EA76427E8C5C928E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8223CA49F66F4A6BB7842DFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB0737E1BF4A427DAA458A6E;
+			remoteInfo = "mimalloc-static";
+		};
+		85CEDA1155C04BE6A9960DC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8223CA49F66F4A6BB7842DFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 657F62F70B354AFEAA6D839C;
+			remoteInfo = ZERO_CHECK;
+		};
+		A9FE1EEBF8EF47D0914309A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8223CA49F66F4A6BB7842DFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC8A73C3CB2B459E94C1390F;
+			remoteInfo = mimalloc;
+		};
+		B083855650064FAFA40C7021 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8223CA49F66F4A6BB7842DFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 657F62F70B354AFEAA6D839C;
+			remoteInfo = ZERO_CHECK;
+		};
+		B4BC16BDCBE84355991BC89A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8223CA49F66F4A6BB7842DFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B8020779E244245968E59C0;
+			remoteInfo = ALL_BUILD;
+		};
+		C019D639988641038CC2FA6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8223CA49F66F4A6BB7842DFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 657F62F70B354AFEAA6D839C;
+			remoteInfo = ZERO_CHECK;
+		};
+		D0C2F1ABFD3341179278C2FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8223CA49F66F4A6BB7842DFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC8A73C3CB2B459E94C1390F;
+			remoteInfo = mimalloc;
+		};
+		D0CD1C3727874EB7883EA6A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8223CA49F66F4A6BB7842DFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 657F62F70B354AFEAA6D839C;
+			remoteInfo = ZERO_CHECK;
+		};
+		F25BB733D90E42F1A9DF5D42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8223CA49F66F4A6BB7842DFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFBE4B8FF5F04F46BC8678A2;
+			remoteInfo = "mimalloc-obj";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04922FF37987438C9DE86A15 /* region.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = region.c; path = src/region.c; sourceTree = SOURCE_ROOT; };
+		0ECD7153AB454A2389004EBD /* page.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = page.c; path = src/page.c; sourceTree = SOURCE_ROOT; };
+		14CDF9B3E5524A0FBC2442D0 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		1E12A72FEF124C4C81437AD6 /* alloc-aligned.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "alloc-aligned.c"; path = "src/alloc-aligned.c"; sourceTree = SOURCE_ROOT; };
+		28D033E14C074DB1AAF59879 /* random.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = random.c; path = src/random.c; sourceTree = SOURCE_ROOT; };
+		33371F03BF42476997CF82F5 /* libmimalloc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libmimalloc.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		367538D16328416EB840D16F /* alloc-aligned.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "alloc-aligned.c"; path = "src/alloc-aligned.c"; sourceTree = SOURCE_ROOT; };
+		3DED8F0FD8A64644BE88948F /* arena.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = arena.c; path = src/arena.c; sourceTree = SOURCE_ROOT; };
+		47A053CE7BFD4507A655323A /* alloc-override-osx.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "alloc-override-osx.c"; path = "src/alloc-override-osx.c"; sourceTree = SOURCE_ROOT; };
+		48693B08BE8444EAB143696F /* options.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = options.c; path = src/options.c; sourceTree = SOURCE_ROOT; };
+		48DBAC4A517D45739DDFC2E5 /* alloc-posix.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "alloc-posix.c"; path = "src/alloc-posix.c"; sourceTree = SOURCE_ROOT; };
+		4C3F1A8C3838440B8A530EEE /* test-api.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "test-api.c"; path = "test/test-api.c"; sourceTree = SOURCE_ROOT; };
+		4FA53539C13D42C6A39ECFA5 /* libmimalloc-obj.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libmimalloc-obj.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		53545280CE0D410DBBC02E9A /* options.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = options.c; path = src/options.c; sourceTree = SOURCE_ROOT; };
+		60E79EAD8C6E4E7BB030EB60 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		61E40D6B4E91429F88C9CB06 /* alloc-override-osx.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "alloc-override-osx.c"; path = "src/alloc-override-osx.c"; sourceTree = SOURCE_ROOT; };
+		6584EF960AB0473D8BCDE5CC /* init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = src/init.c; sourceTree = SOURCE_ROOT; };
+		69AB6572064D46BF895B466A /* static.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = static.c; path = src/static.c; sourceTree = SOURCE_ROOT; };
+		6EEE514F1DF94EBDA75E323B /* alloc-posix.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "alloc-posix.c"; path = "src/alloc-posix.c"; sourceTree = SOURCE_ROOT; };
+		7326B0DF9984434D889C4929 /* mimalloc-test-api */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = "mimalloc-test-api"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7876B561B74A41D481232BD8 /* stats.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = stats.c; path = src/stats.c; sourceTree = SOURCE_ROOT; };
+		7924F72A6EA84B009BC900E2 /* arena.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = arena.c; path = src/arena.c; sourceTree = SOURCE_ROOT; };
+		7DCCD2104DCA4506A022D924 /* test-stress.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = "test-stress.c"; path = "test/test-stress.c"; sourceTree = SOURCE_ROOT; };
+		865B1AEDCCC94EB4885852F2 /* os.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = os.c; path = src/os.c; sourceTree = SOURCE_ROOT; };
+		88084749B75246CAB323DFF5 /* bitmap.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = bitmap.c; path = src/bitmap.c; sourceTree = SOURCE_ROOT; };
+		880EF9266EC24B5F8D3C8E3F /* mimalloc-test-stress */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = "mimalloc-test-stress"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BCB567E9A9541D89A581057 /* alloc.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = alloc.c; path = src/alloc.c; sourceTree = SOURCE_ROOT; };
+		941EFE1B196D41DC9883D7F3 /* segment.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = segment.c; path = src/segment.c; sourceTree = SOURCE_ROOT; };
+		96AECB04DB2843E9970018B6 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		A2CB648582BF41FAA0E4C342 /* libmimalloc.1.7.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libmimalloc.1.7.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		A67FDAE9A9E74A15A8803AA5 /* alloc.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = alloc.c; path = src/alloc.c; sourceTree = SOURCE_ROOT; };
+		A795849F919B431C992EF30C /* heap.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = heap.c; path = src/heap.c; sourceTree = SOURCE_ROOT; };
+		AF1332EB64644F95906FC0C9 /* heap.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = heap.c; path = src/heap.c; sourceTree = SOURCE_ROOT; };
+		AF4D7915A2044CE8A66BD8AD /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		B7F22160943E46918B1468CE /* stats.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = stats.c; path = src/stats.c; sourceTree = SOURCE_ROOT; };
+		BAC9BF06360C4F1E8D1E00AB /* init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = src/init.c; sourceTree = SOURCE_ROOT; };
+		BE9EFD776E3C4A8D8BE64DF6 /* region.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = region.c; path = src/region.c; sourceTree = SOURCE_ROOT; };
+		CE4A17DB4356483AA0B72330 /* segment.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = segment.c; path = src/segment.c; sourceTree = SOURCE_ROOT; };
+		CF5BD3BFE6624C678E994EE7 /* bitmap.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = bitmap.c; path = src/bitmap.c; sourceTree = SOURCE_ROOT; };
+		D2AAA194FB544F998FFCE7CB /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		D2DED32BD13A4AB0BB45A1DE /* page.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = page.c; path = src/page.c; sourceTree = SOURCE_ROOT; };
+		EFBD90B676AE43339D80F7EA /* random.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = random.c; path = src/random.c; sourceTree = SOURCE_ROOT; };
+		F2B789C3917142F1A219EAAD /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		FFF114029E584B3FB1DC3F55 /* os.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = os.c; path = src/os.c; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		1730BF52314248278F7ED3FD /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C3F1A8C3838440B8A530EEE /* test-api.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		17EACE1B1A344DFA8698AEC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2CB648582BF41FAA0E4C342 /* libmimalloc.1.7.dylib */,
+				4FA53539C13D42C6A39ECFA5 /* libmimalloc-obj.a */,
+				33371F03BF42476997CF82F5 /* libmimalloc.a */,
+				7326B0DF9984434D889C4929 /* mimalloc-test-api */,
+				880EF9266EC24B5F8D3C8E3F /* mimalloc-test-stress */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F04FEBD9A8C457CA0D499CA /* mimalloc-test-api */ = {
+			isa = PBXGroup;
+			children = (
+				1730BF52314248278F7ED3FD /* Source Files */,
+				AF4D7915A2044CE8A66BD8AD /* CMakeLists.txt */,
+			);
+			name = "mimalloc-test-api";
+			sourceTree = "<group>";
+		};
+		25C22E1C42244D879BB0BE4A /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				AE5D731F2C574C6FBE1FA52F /* CMake Rules */,
+				96AECB04DB2843E9970018B6 /* CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		4FF757F9066F4A34A1EC52E2 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				7DCCD2104DCA4506A022D924 /* test-stress.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		6F00010CF3114B6FBC1A6C21 = {
+			isa = PBXGroup;
+			children = (
+				A47CABEB4AB749888C536CCE /* mimalloc-test-stress */,
+				B5022C8F043B4902BFD99ABD /* mimalloc-obj */,
+				AF9EBF1AAAAC43EFA06E610E /* mimalloc-static */,
+				1F04FEBD9A8C457CA0D499CA /* mimalloc-test-api */,
+				771DCD29D5EF4D729DA3455E /* mimalloc */,
+				25C22E1C42244D879BB0BE4A /* ALL_BUILD */,
+				17EACE1B1A344DFA8698AEC5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		771DCD29D5EF4D729DA3455E /* mimalloc */ = {
+			isa = PBXGroup;
+			children = (
+				BA85A0DF3FC04CD0A1F50099 /* Source Files */,
+				D2AAA194FB544F998FFCE7CB /* CMakeLists.txt */,
+			);
+			name = mimalloc;
+			sourceTree = "<group>";
+		};
+		A47CABEB4AB749888C536CCE /* mimalloc-test-stress */ = {
+			isa = PBXGroup;
+			children = (
+				4FF757F9066F4A34A1EC52E2 /* Source Files */,
+				14CDF9B3E5524A0FBC2442D0 /* CMakeLists.txt */,
+			);
+			name = "mimalloc-test-stress";
+			sourceTree = "<group>";
+		};
+		A511E1202F4C4967ADEF8C48 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				69AB6572064D46BF895B466A /* static.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		AE5D731F2C574C6FBE1FA52F /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		AF9EBF1AAAAC43EFA06E610E /* mimalloc-static */ = {
+			isa = PBXGroup;
+			children = (
+				B15E61B9D43441AD9D1D13D3 /* Source Files */,
+				F2B789C3917142F1A219EAAD /* CMakeLists.txt */,
+			);
+			name = "mimalloc-static";
+			sourceTree = "<group>";
+		};
+		B15E61B9D43441AD9D1D13D3 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				1E12A72FEF124C4C81437AD6 /* alloc-aligned.c */,
+				61E40D6B4E91429F88C9CB06 /* alloc-override-osx.c */,
+				48DBAC4A517D45739DDFC2E5 /* alloc-posix.c */,
+				8BCB567E9A9541D89A581057 /* alloc.c */,
+				3DED8F0FD8A64644BE88948F /* arena.c */,
+				88084749B75246CAB323DFF5 /* bitmap.c */,
+				A795849F919B431C992EF30C /* heap.c */,
+				BAC9BF06360C4F1E8D1E00AB /* init.c */,
+				48693B08BE8444EAB143696F /* options.c */,
+				865B1AEDCCC94EB4885852F2 /* os.c */,
+				D2DED32BD13A4AB0BB45A1DE /* page.c */,
+				28D033E14C074DB1AAF59879 /* random.c */,
+				04922FF37987438C9DE86A15 /* region.c */,
+				941EFE1B196D41DC9883D7F3 /* segment.c */,
+				B7F22160943E46918B1468CE /* stats.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		B5022C8F043B4902BFD99ABD /* mimalloc-obj */ = {
+			isa = PBXGroup;
+			children = (
+				A511E1202F4C4967ADEF8C48 /* Source Files */,
+				60E79EAD8C6E4E7BB030EB60 /* CMakeLists.txt */,
+			);
+			name = "mimalloc-obj";
+			sourceTree = "<group>";
+		};
+		BA85A0DF3FC04CD0A1F50099 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				367538D16328416EB840D16F /* alloc-aligned.c */,
+				47A053CE7BFD4507A655323A /* alloc-override-osx.c */,
+				6EEE514F1DF94EBDA75E323B /* alloc-posix.c */,
+				A67FDAE9A9E74A15A8803AA5 /* alloc.c */,
+				7924F72A6EA84B009BC900E2 /* arena.c */,
+				CF5BD3BFE6624C678E994EE7 /* bitmap.c */,
+				AF1332EB64644F95906FC0C9 /* heap.c */,
+				6584EF960AB0473D8BCDE5CC /* init.c */,
+				53545280CE0D410DBBC02E9A /* options.c */,
+				FFF114029E584B3FB1DC3F55 /* os.c */,
+				0ECD7153AB454A2389004EBD /* page.c */,
+				EFBD90B676AE43339D80F7EA /* random.c */,
+				BE9EFD776E3C4A8D8BE64DF6 /* region.c */,
+				CE4A17DB4356483AA0B72330 /* segment.c */,
+				7876B561B74A41D481232BD8 /* stats.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49600E482EC5428EBE3A4DA6 /* mimalloc-test-api */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2D36A951B2A4F6C8F6F3BC7 /* Build configuration list for PBXNativeTarget "mimalloc-test-api" */;
+			buildPhases = (
+				B77F4F43C4584F06B67F41D3 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D57DE738DABC405FBBABA587 /* PBXTargetDependency */,
+				6C7EFE29802E48A2BA09E160 /* PBXTargetDependency */,
+			);
+			name = "mimalloc-test-api";
+			productName = "mimalloc-test-api";
+			productReference = 7326B0DF9984434D889C4929 /* mimalloc-test-api */;
+			productType = "com.apple.product-type.tool";
+		};
+		A49C18726146486CA173BD95 /* mimalloc-test-stress */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A49B17BBEB5243BDBEF53A78 /* Build configuration list for PBXNativeTarget "mimalloc-test-stress" */;
+			buildPhases = (
+				F82E959768254BE8BA9932C8 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95A6E2DE5DD647BF88D0556D /* PBXTargetDependency */,
+				302E5BD8E33D4CD8B01E0DA2 /* PBXTargetDependency */,
+			);
+			name = "mimalloc-test-stress";
+			productName = "mimalloc-test-stress";
+			productReference = 880EF9266EC24B5F8D3C8E3F /* mimalloc-test-stress */;
+			productType = "com.apple.product-type.tool";
+		};
+		BC8A73C3CB2B459E94C1390F /* mimalloc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 356A7B23D4E640B9ACD89364 /* Build configuration list for PBXNativeTarget "mimalloc" */;
+			buildPhases = (
+				408F28100CA444579B8CC868 /* Sources */,
+				C0652F63FFAB4E958B8C8DA3 /* CMake PostBuild Rules */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB2E520A8F7D49598CD08FCC /* PBXTargetDependency */,
+			);
+			name = mimalloc;
+			productName = mimalloc;
+			productReference = A2CB648582BF41FAA0E4C342 /* libmimalloc.1.7.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		DB0737E1BF4A427DAA458A6E /* mimalloc-static */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E86148D321348C084E28E8D /* Build configuration list for PBXNativeTarget "mimalloc-static" */;
+			buildPhases = (
+				4F907CA9472F4EDE9A28E192 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				58CE2D6B725344A3AAFD2E9A /* PBXTargetDependency */,
+			);
+			name = "mimalloc-static";
+			productName = "mimalloc-static";
+			productReference = 33371F03BF42476997CF82F5 /* libmimalloc.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EFBE4B8FF5F04F46BC8678A2 /* mimalloc-obj */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1248F2DBB344E659DA8A41D /* Build configuration list for PBXNativeTarget "mimalloc-obj" */;
+			buildPhases = (
+				E5722F5F0DC340F0B01E0027 /* Sources */,
+				AD3ECF83B1B74E3A898E8D0A /* CMake PostBuild Rules */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				668E3D9D3C8747DDA7127CE0 /* PBXTargetDependency */,
+			);
+			name = "mimalloc-obj";
+			productName = "mimalloc-obj";
+			productReference = 4FA53539C13D42C6A39ECFA5 /* libmimalloc-obj.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8223CA49F66F4A6BB7842DFF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1130;
+				TargetAttributes = {
+					29E459CFBA794E9A93D7709D = {
+						DevelopmentTeam = GP6WLPM75Q;
+					};
+					3952842709364435A8CE7DC3 = {
+						DevelopmentTeam = GP6WLPM75Q;
+					};
+					49600E482EC5428EBE3A4DA6 = {
+						DevelopmentTeam = GP6WLPM75Q;
+					};
+					657F62F70B354AFEAA6D839C = {
+						DevelopmentTeam = GP6WLPM75Q;
+					};
+					9B8020779E244245968E59C0 = {
+						DevelopmentTeam = GP6WLPM75Q;
+					};
+					A49C18726146486CA173BD95 = {
+						DevelopmentTeam = GP6WLPM75Q;
+					};
+					BC8A73C3CB2B459E94C1390F = {
+						DevelopmentTeam = GP6WLPM75Q;
+					};
+					DB0737E1BF4A427DAA458A6E = {
+						DevelopmentTeam = GP6WLPM75Q;
+					};
+					EFBE4B8FF5F04F46BC8678A2 = {
+						DevelopmentTeam = GP6WLPM75Q;
+					};
+				};
+			};
+			buildConfigurationList = E0455B956C714C8C838B25B3 /* Build configuration list for PBXProject "libmimalloc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6F00010CF3114B6FBC1A6C21;
+			projectDirPath = ../;
+			projectRoot = "";
+			targets = (
+				9B8020779E244245968E59C0 /* ALL_BUILD */,
+				29E459CFBA794E9A93D7709D /* RUN_TESTS */,
+				657F62F70B354AFEAA6D839C /* ZERO_CHECK */,
+				3952842709364435A8CE7DC3 /* install */,
+				BC8A73C3CB2B459E94C1390F /* mimalloc */,
+				EFBE4B8FF5F04F46BC8678A2 /* mimalloc-obj */,
+				DB0737E1BF4A427DAA458A6E /* mimalloc-static */,
+				49600E482EC5428EBE3A4DA6 /* mimalloc-test-api */,
+				A49C18726146486CA173BD95 /* mimalloc-test-stress */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		035795E88BEC401C8F180730 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/aligame/Desktop/wcode/mimalloc/build -f /Users/aligame/Desktop/wcode/mimalloc/build/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		508FDB3C21864B1F82E38A57 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/aligame/Desktop/wcode/mimalloc/build -f /Users/aligame/Desktop/wcode/mimalloc/build/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		9C3F50362CAB45A5BBA345F9 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/aligame/Desktop/wcode/mimalloc/build -f /Users/aligame/Desktop/wcode/mimalloc/build/CMakeScripts/install_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		A57B57E6344944F98C412A0F /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/aligame/Desktop/wcode/mimalloc/build -f /Users/aligame/Desktop/wcode/mimalloc/build/CMakeScripts/RUN_TESTS_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		AD3ECF83B1B74E3A898E8D0A /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/aligame/Desktop/wcode/mimalloc/build -f /Users/aligame/Desktop/wcode/mimalloc/build/CMakeScripts/mimalloc-obj_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+		C0652F63FFAB4E958B8C8DA3 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/aligame/Desktop/wcode/mimalloc/build -f /Users/aligame/Desktop/wcode/mimalloc/build/CMakeScripts/mimalloc_postBuildPhase.make$CONFIGURATION OBJDIR=$(basename \"$OBJECT_FILE_DIR_normal\") all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		408F28100CA444579B8CC868 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD86BEE0AFCD46E4A996E643 /* alloc-aligned.c in Sources */,
+				2F6A0A11DD97409680708BDB /* alloc-override-osx.c in Sources */,
+				F359D07C19C34A73B8F11F88 /* alloc-posix.c in Sources */,
+				651840D8AEF5423DAC202140 /* alloc.c in Sources */,
+				18F3F76787B4439298E9121A /* arena.c in Sources */,
+				224100BBB4854AC0818B24F1 /* bitmap.c in Sources */,
+				FD779B93316947C984AD2562 /* heap.c in Sources */,
+				239E755FCA0B449BB3B6C63E /* init.c in Sources */,
+				D3B005AAC2394FF09C2F5CE4 /* options.c in Sources */,
+				52840D4F3D9849B4B490E23B /* os.c in Sources */,
+				698092E164EF4C7F9732421B /* page.c in Sources */,
+				E729BE493F1748D58407F2C3 /* random.c in Sources */,
+				17AECA0ABB074609AFD75FBF /* region.c in Sources */,
+				F962EE9DE3A24FF28B00AA85 /* segment.c in Sources */,
+				B7BFCE054F0A4CC8B8F03212 /* stats.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F907CA9472F4EDE9A28E192 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28A18118F7994830AC34576F /* alloc-aligned.c in Sources */,
+				2904F308E11D4CA0914CD84E /* alloc-override-osx.c in Sources */,
+				828E4B0BE7AF4EA0A0A8147C /* alloc-posix.c in Sources */,
+				F29202C5BAD549A2AC231C6A /* alloc.c in Sources */,
+				7690BA7B4DCE41A1BDD2761E /* arena.c in Sources */,
+				F05949B5F30B47ED871FEBBB /* bitmap.c in Sources */,
+				067382A8F7A940D88D944A57 /* heap.c in Sources */,
+				C34AED873D724FDCBAFC55DC /* init.c in Sources */,
+				DBC200CC0BAF4DA0A57F7B34 /* options.c in Sources */,
+				4D59AFEDE00C451AAF9754E2 /* os.c in Sources */,
+				DA00C89BE22943C18D14743B /* page.c in Sources */,
+				E5F85B0EBFDE410DA211D5F9 /* random.c in Sources */,
+				83457BA17BC04748A658925F /* region.c in Sources */,
+				9AD1C575C7DB4F8087DA260B /* segment.c in Sources */,
+				52768CC6A5AE4B1F8C4B5EDC /* stats.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B77F4F43C4584F06B67F41D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				768F3F6342774145886907D8 /* test-api.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5722F5F0DC340F0B01E0027 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ED220B50F3D47D781C620BC /* static.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F82E959768254BE8BA9932C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFF78FF544D245E1934BC1F1 /* test-stress.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		302E5BD8E33D4CD8B01E0DA2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 657F62F70B354AFEAA6D839C /* ZERO_CHECK */;
+			targetProxy = B083855650064FAFA40C7021 /* PBXContainerItemProxy */;
+		};
+		48F7E9D717E84EF78A3A789F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFBE4B8FF5F04F46BC8678A2 /* mimalloc-obj */;
+			targetProxy = F25BB733D90E42F1A9DF5D42 /* PBXContainerItemProxy */;
+		};
+		58CE2D6B725344A3AAFD2E9A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 657F62F70B354AFEAA6D839C /* ZERO_CHECK */;
+			targetProxy = C019D639988641038CC2FA6E /* PBXContainerItemProxy */;
+		};
+		62930BC2CDBF4DABBC32FEF9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB0737E1BF4A427DAA458A6E /* mimalloc-static */;
+			targetProxy = 5F099C2B9C3841E79DAC00A5 /* PBXContainerItemProxy */;
+		};
+		668E3D9D3C8747DDA7127CE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 657F62F70B354AFEAA6D839C /* ZERO_CHECK */;
+			targetProxy = D0CD1C3727874EB7883EA6A2 /* PBXContainerItemProxy */;
+		};
+		6C7EFE29802E48A2BA09E160 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 657F62F70B354AFEAA6D839C /* ZERO_CHECK */;
+			targetProxy = 48508338A16E4786BDF47D2D /* PBXContainerItemProxy */;
+		};
+		95A6E2DE5DD647BF88D0556D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC8A73C3CB2B459E94C1390F /* mimalloc */;
+			targetProxy = A9FE1EEBF8EF47D0914309A9 /* PBXContainerItemProxy */;
+		};
+		99F22972FA3C401FADD0D974 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B8020779E244245968E59C0 /* ALL_BUILD */;
+			targetProxy = B4BC16BDCBE84355991BC89A /* PBXContainerItemProxy */;
+		};
+		A5D1A366123446FC920337C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC8A73C3CB2B459E94C1390F /* mimalloc */;
+			targetProxy = D0C2F1ABFD3341179278C2FF /* PBXContainerItemProxy */;
+		};
+		A8B55C91F6064060B3AAD2CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A49C18726146486CA173BD95 /* mimalloc-test-stress */;
+			targetProxy = 2F7FB8F86F4345BD93201E80 /* PBXContainerItemProxy */;
+		};
+		B49ED9B084B541708DE18F83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 657F62F70B354AFEAA6D839C /* ZERO_CHECK */;
+			targetProxy = 85CEDA1155C04BE6A9960DC4 /* PBXContainerItemProxy */;
+		};
+		D57DE738DABC405FBBABA587 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB0737E1BF4A427DAA458A6E /* mimalloc-static */;
+			targetProxy = 7B591AD5EA76427E8C5C928E /* PBXContainerItemProxy */;
+		};
+		EC49FBA8BD4C434AACB24618 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49600E482EC5428EBE3A4DA6 /* mimalloc-test-api */;
+			targetProxy = 0C8C3B931BB34583B8CA9079 /* PBXContainerItemProxy */;
+		};
+		FB2E520A8F7D49598CD08FCC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 657F62F70B354AFEAA6D839C /* ZERO_CHECK */;
+			targetProxy = 5C9A86F030F04A859C2DE317 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0194D09A33014627B073D1E8 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'MI_OSX_ZONE=1'",
+					MI_STATIC_LIB,
+					MI_MALLOC_OVERRIDE,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/aligame/Desktop/wcode/mimalloc/include;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-Wall",
+					"-Wextra",
+					"-Wno-unknown-pragmas",
+					"'-fvisibility=hidden'",
+					"-Wpedantic",
+					"-Wno-static-in-inline",
+					"'-ftls-model=initial-exec'",
+					"'-std=gnu11'",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = mimalloc;
+				SECTORDER_FLAGS = "";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 armv7 arm64e armv7s";
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		03D97ECED84E4C63883AEC27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		0B45EE5C8B4B44D39348FEE8 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		2106BBCA0EB844CA892DD573 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		2A487768F7BA4D39BDAFE340 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		2D420F9D38B346279619F03E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = 1.7.0;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .dylib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					mimalloc_EXPORTS,
+					"'MI_OSX_ZONE=1'",
+					MI_SHARED_LIB,
+					MI_SHARED_LIB_EXPORT,
+					MI_MALLOC_OVERRIDE,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/aligame/Desktop/wcode/mimalloc/include;
+				INSTALL_PATH = "@rpath";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = DYNAMIC;
+				NEW_SETTING = "";
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-Wall",
+					"-Wextra",
+					"-Wno-unknown-pragmas",
+					"'-fvisibility=hidden'",
+					"-Wpedantic",
+					"-Wno-static-in-inline",
+					"'-ftls-model=initial-exec'",
+					"'-std=gnu11'",
+				);
+				OTHER_LDFLAGS = (
+					"-dynamiclib",
+					"-Wl,-headerpad_max_install_names",
+					"-lpthread",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = mimalloc.1.7;
+				SECTORDER_FLAGS = "";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 armv7 arm64e armv7s";
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		300D26013D5248659FBCFC13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		37279ECA37ED47F689CC8671 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'MI_OSX_ZONE=1'",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/aligame/Desktop/wcode/mimalloc/include;
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /Users/aligame/Desktop/wcode/mimalloc/build/RelWithDebInfo;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-Wall",
+					"-Wextra",
+					"-Wno-unknown-pragmas",
+					"'-fvisibility=hidden'",
+					"-Wpedantic",
+					"-Wno-static-in-inline",
+					"'-ftls-model=initial-exec'",
+					"'-std=gnu11'",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					/Users/aligame/Desktop/wcode/mimalloc/build/RelWithDebInfo/libmimalloc.1.7.dylib,
+					"-lpthread",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "mimalloc-test-stress";
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		3BA7B0AD03B54B48B62887E5 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'MI_OSX_ZONE=1'",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/aligame/Desktop/wcode/mimalloc/include;
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /Users/aligame/Desktop/wcode/mimalloc/build/MinSizeRel;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-Wall",
+					"-Wextra",
+					"-Wno-unknown-pragmas",
+					"'-fvisibility=hidden'",
+					"-Wpedantic",
+					"-Wno-static-in-inline",
+					"'-ftls-model=initial-exec'",
+					"'-std=gnu11'",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					/Users/aligame/Desktop/wcode/mimalloc/build/MinSizeRel/libmimalloc.1.7.dylib,
+					"-lpthread",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "mimalloc-test-stress";
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		4FC99D2BCC2241D0BF139739 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'MI_OSX_ZONE=1'",
+					MI_STATIC_LIB,
+					MI_MALLOC_OVERRIDE,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/aligame/Desktop/wcode/mimalloc/include;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-Wall",
+					"-Wextra",
+					"-Wno-unknown-pragmas",
+					"'-fvisibility=hidden'",
+					"-Wpedantic",
+					"-Wno-static-in-inline",
+					"'-ftls-model=initial-exec'",
+					"'-std=gnu11'",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = mimalloc;
+				SECTORDER_FLAGS = "";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 armv7 arm64e armv7s";
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		59DA20F0EBD34AF4853EF148 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		5AA3EB6C842A4EC6A140957F /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		5B855D2D0A77418EBE0E35F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = GP6WLPM75Q;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build/build;
+				VALID_ARCHS = "i386 x86_64 arm64 armv7 arm64e armv7s";
+			};
+			name = Debug;
+		};
+		5FFD921AA04043138F3EFEDC /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'MI_OSX_ZONE=1'",
+					MI_STATIC_LIB,
+					MI_MALLOC_OVERRIDE,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/aligame/Desktop/wcode/mimalloc/include;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-Wall",
+					"-Wextra",
+					"-Wno-unknown-pragmas",
+					"'-fvisibility=hidden'",
+					"-Wpedantic",
+					"-Wno-static-in-inline",
+					"'-ftls-model=initial-exec'",
+					"'-std=gnu11'",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = mimalloc;
+				SECTORDER_FLAGS = "";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 armv7 arm64e armv7s";
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		604E1DB963D24E559CE2717C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/aligame/Desktop/wcode/mimalloc/build/libmimalloc.build/Debug/mimalloc-obj.build/";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'MI_OSX_ZONE=1'",
+					MI_MALLOC_OVERRIDE,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/aligame/Desktop/wcode/mimalloc/include;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = (
+					"-fPIC",
+					"-Wall",
+					"-Wextra",
+					"-Wno-unknown-pragmas",
+					"'-fvisibility=hidden'",
+					"-Wpedantic",
+					"-Wno-static-in-inline",
+					"'-ftls-model=initial-exec'",
+					"'-std=gnu11'",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "mimalloc-obj";
+				SECTORDER_FLAGS = "";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 armv7 arm64e armv7s";
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		73D21E25456D40828636C527 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'MI_OSX_ZONE=1'",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/aligame/Desktop/wcode/mimalloc/include;
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-Wall",
+					"-Wextra",
+					"-Wno-unknown-pragmas",
+					"'-fvisibility=hidden'",
+					"-Wpedantic",
+					"-Wno-static-in-inline",
+					"'-ftls-model=initial-exec'",
+					"'-std=gnu11'",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					/Users/aligame/Desktop/wcode/mimalloc/build/RelWithDebInfo/libmimalloc.a,
+					"-lpthread",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "mimalloc-test-api";
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		7E42975471844AE182AB1F65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'MI_OSX_ZONE=1'",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/aligame/Desktop/wcode/mimalloc/include;
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-Wall",
+					"-Wextra",
+					"-Wno-unknown-pragmas",
+					"'-fvisibility=hidden'",
+					"-Wpedantic",
+					"-Wno-static-in-inline",
+					"'-ftls-model=initial-exec'",
+					"'-std=gnu11'",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					/Users/aligame/Desktop/wcode/mimalloc/build/Release/libmimalloc.a,
+					"-lpthread",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "mimalloc-test-api";
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		80F97796184F4F26B83FFF97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/aligame/Desktop/wcode/mimalloc/build/libmimalloc.build/Release/mimalloc-obj.build/";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'MI_OSX_ZONE=1'",
+					MI_MALLOC_OVERRIDE,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/aligame/Desktop/wcode/mimalloc/include;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-Wall",
+					"-Wextra",
+					"-Wno-unknown-pragmas",
+					"'-fvisibility=hidden'",
+					"-Wpedantic",
+					"-Wno-static-in-inline",
+					"'-ftls-model=initial-exec'",
+					"'-std=gnu11'",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "mimalloc-obj";
+				SECTORDER_FLAGS = "";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 armv7 arm64e armv7s";
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		8496FFFD4DDD489896F46A14 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/aligame/Desktop/wcode/mimalloc/build/libmimalloc.build/MinSizeRel/mimalloc-obj.build/";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'MI_OSX_ZONE=1'",
+					MI_MALLOC_OVERRIDE,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/aligame/Desktop/wcode/mimalloc/include;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-Wall",
+					"-Wextra",
+					"-Wno-unknown-pragmas",
+					"'-fvisibility=hidden'",
+					"-Wpedantic",
+					"-Wno-static-in-inline",
+					"'-ftls-model=initial-exec'",
+					"'-std=gnu11'",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "mimalloc-obj";
+				SECTORDER_FLAGS = "";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 armv7 arm64e armv7s";
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		93A2325847A4442083E22AFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'MI_OSX_ZONE=1'",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/aligame/Desktop/wcode/mimalloc/include;
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /Users/aligame/Desktop/wcode/mimalloc/build/Release;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-Wall",
+					"-Wextra",
+					"-Wno-unknown-pragmas",
+					"'-fvisibility=hidden'",
+					"-Wpedantic",
+					"-Wno-static-in-inline",
+					"'-ftls-model=initial-exec'",
+					"'-std=gnu11'",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					/Users/aligame/Desktop/wcode/mimalloc/build/Release/libmimalloc.1.7.dylib,
+					"-lpthread",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "mimalloc-test-stress";
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		93B73F6376C14534820CCB68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		96D461A88D464F55A633E10B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = GP6WLPM75Q;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build/build;
+				VALID_ARCHS = "i386 x86_64 arm64 armv7 arm64e armv7s";
+			};
+			name = Release;
+		};
+		9D6A209F169B4202BE866C55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = 1.7.0;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .dylib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					mimalloc_EXPORTS,
+					"'MI_OSX_ZONE=1'",
+					MI_SHARED_LIB,
+					MI_SHARED_LIB_EXPORT,
+					MI_MALLOC_OVERRIDE,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/aligame/Desktop/wcode/mimalloc/include;
+				INSTALL_PATH = "@rpath";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = DYNAMIC;
+				NEW_SETTING = "";
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-Wall",
+					"-Wextra",
+					"-Wno-unknown-pragmas",
+					"'-fvisibility=hidden'",
+					"-Wpedantic",
+					"-Wno-static-in-inline",
+					"'-ftls-model=initial-exec'",
+					"'-std=gnu11'",
+				);
+				OTHER_LDFLAGS = (
+					"-dynamiclib",
+					"-Wl,-headerpad_max_install_names",
+					"-lpthread",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = mimalloc.1.7;
+				SECTORDER_FLAGS = "";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 armv7 arm64e armv7s";
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		A1EE04D0C859413EB17E6E2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = 1.7.0;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .dylib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					mimalloc_EXPORTS,
+					"'MI_OSX_ZONE=1'",
+					MI_SHARED_LIB,
+					MI_SHARED_LIB_EXPORT,
+					MI_MALLOC_OVERRIDE,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/aligame/Desktop/wcode/mimalloc/include;
+				INSTALL_PATH = "@rpath";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = DYNAMIC;
+				NEW_SETTING = "";
+				OTHER_CFLAGS = (
+					"-fPIC",
+					"-Wall",
+					"-Wextra",
+					"-Wno-unknown-pragmas",
+					"'-fvisibility=hidden'",
+					"-Wpedantic",
+					"-Wno-static-in-inline",
+					"'-ftls-model=initial-exec'",
+					"'-std=gnu11'",
+				);
+				OTHER_LDFLAGS = (
+					"-dynamiclib",
+					"-Wl,-headerpad_max_install_names",
+					"-lpthread",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = mimalloc.1.7;
+				SECTORDER_FLAGS = "";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 armv7 arm64e armv7s";
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		A90B315E0B27436891446918 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		B12D6721F8D14293AF56D3DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		B2B4427D3EA943FBA793D021 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/aligame/Desktop/wcode/mimalloc/build/libmimalloc.build/RelWithDebInfo/mimalloc-obj.build/";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'MI_OSX_ZONE=1'",
+					MI_MALLOC_OVERRIDE,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/aligame/Desktop/wcode/mimalloc/include;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-Wall",
+					"-Wextra",
+					"-Wno-unknown-pragmas",
+					"'-fvisibility=hidden'",
+					"-Wpedantic",
+					"-Wno-static-in-inline",
+					"'-ftls-model=initial-exec'",
+					"'-std=gnu11'",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "mimalloc-obj";
+				SECTORDER_FLAGS = "";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 armv7 arm64e armv7s";
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		B40E5C66CAED42FFA56C583B /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		C47DB05B33BF430A93CD8BED /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = GP6WLPM75Q;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build/build;
+				VALID_ARCHS = "i386 x86_64 arm64 armv7 arm64e armv7s";
+			};
+			name = MinSizeRel;
+		};
+		CB5F51F234E44E74AA0836A3 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = 1.7.0;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .dylib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					mimalloc_EXPORTS,
+					"'MI_OSX_ZONE=1'",
+					MI_SHARED_LIB,
+					MI_SHARED_LIB_EXPORT,
+					MI_MALLOC_OVERRIDE,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/aligame/Desktop/wcode/mimalloc/include;
+				INSTALL_PATH = "@rpath";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = DYNAMIC;
+				NEW_SETTING = "";
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-Wall",
+					"-Wextra",
+					"-Wno-unknown-pragmas",
+					"'-fvisibility=hidden'",
+					"-Wpedantic",
+					"-Wno-static-in-inline",
+					"'-ftls-model=initial-exec'",
+					"'-std=gnu11'",
+				);
+				OTHER_LDFLAGS = (
+					"-dynamiclib",
+					"-Wl,-headerpad_max_install_names",
+					"-lpthread",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = mimalloc.1.7;
+				SECTORDER_FLAGS = "";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 armv7 arm64e armv7s";
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		CE64702E628E4D2295DDA0B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		D3E951DD0E7A492E927477CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		D8E2F36005784AB69F6818B4 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		DA69D6D1130043528AD1C321 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'MI_OSX_ZONE=1'",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/aligame/Desktop/wcode/mimalloc/include;
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /Users/aligame/Desktop/wcode/mimalloc/build/Debug;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-unknown-pragmas",
+					"'-fvisibility=hidden'",
+					"-Wpedantic",
+					"-Wno-static-in-inline",
+					"'-ftls-model=initial-exec'",
+					"'-std=gnu11'",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					/Users/aligame/Desktop/wcode/mimalloc/build/Debug/libmimalloc.1.7.dylib,
+					"-lpthread",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "mimalloc-test-stress";
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		DEA9633CFA1B427CB451855D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'MI_OSX_ZONE=1'",
+					MI_STATIC_LIB,
+					MI_MALLOC_OVERRIDE,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/aligame/Desktop/wcode/mimalloc/include;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = (
+					"-fPIC",
+					"-Wall",
+					"-Wextra",
+					"-Wno-unknown-pragmas",
+					"'-fvisibility=hidden'",
+					"-Wpedantic",
+					"-Wno-static-in-inline",
+					"'-ftls-model=initial-exec'",
+					"'-std=gnu11'",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = mimalloc;
+				SECTORDER_FLAGS = "";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 armv7 arm64e armv7s";
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		E61D91236BC147FEA087F860 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'MI_OSX_ZONE=1'",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/aligame/Desktop/wcode/mimalloc/include;
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-unknown-pragmas",
+					"'-fvisibility=hidden'",
+					"-Wpedantic",
+					"-Wno-static-in-inline",
+					"'-ftls-model=initial-exec'",
+					"'-std=gnu11'",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					/Users/aligame/Desktop/wcode/mimalloc/build/Debug/libmimalloc.a,
+					"-lpthread",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "mimalloc-test-api";
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		ED99165F87744B02A3556B71 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"'MI_OSX_ZONE=1'",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/aligame/Desktop/wcode/mimalloc/include;
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-Wall",
+					"-Wextra",
+					"-Wno-unknown-pragmas",
+					"'-fvisibility=hidden'",
+					"-Wpedantic",
+					"-Wno-static-in-inline",
+					"'-ftls-model=initial-exec'",
+					"'-std=gnu11'",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					/Users/aligame/Desktop/wcode/mimalloc/build/MinSizeRel/libmimalloc.a,
+					"-lpthread",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "mimalloc-test-api";
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		F263F7AAEAF5404287EA2F4D /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		F620B98D4C7D4A7DACBFD8B5 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		FC8FCD163AF84D339A517C76 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = GP6WLPM75Q;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SYMROOT = /Users/aligame/Desktop/wcode/mimalloc/build/build;
+				VALID_ARCHS = "i386 x86_64 arm64 armv7 arm64e armv7s";
+			};
+			name = RelWithDebInfo;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		356A7B23D4E640B9ACD89364 /* Build configuration list for PBXNativeTarget "mimalloc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1EE04D0C859413EB17E6E2B /* Debug */,
+				9D6A209F169B4202BE866C55 /* Release */,
+				CB5F51F234E44E74AA0836A3 /* MinSizeRel */,
+				2D420F9D38B346279619F03E /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3E86148D321348C084E28E8D /* Build configuration list for PBXNativeTarget "mimalloc-static" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEA9633CFA1B427CB451855D /* Debug */,
+				4FC99D2BCC2241D0BF139739 /* Release */,
+				5FFD921AA04043138F3EFEDC /* MinSizeRel */,
+				0194D09A33014627B073D1E8 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A49B17BBEB5243BDBEF53A78 /* Build configuration list for PBXNativeTarget "mimalloc-test-stress" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA69D6D1130043528AD1C321 /* Debug */,
+				93A2325847A4442083E22AFF /* Release */,
+				3BA7B0AD03B54B48B62887E5 /* MinSizeRel */,
+				37279ECA37ED47F689CC8671 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B2D36A951B2A4F6C8F6F3BC7 /* Build configuration list for PBXNativeTarget "mimalloc-test-api" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E61D91236BC147FEA087F860 /* Debug */,
+				7E42975471844AE182AB1F65 /* Release */,
+				ED99165F87744B02A3556B71 /* MinSizeRel */,
+				73D21E25456D40828636C527 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D1248F2DBB344E659DA8A41D /* Build configuration list for PBXNativeTarget "mimalloc-obj" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				604E1DB963D24E559CE2717C /* Debug */,
+				80F97796184F4F26B83FFF97 /* Release */,
+				8496FFFD4DDD489896F46A14 /* MinSizeRel */,
+				B2B4427D3EA943FBA793D021 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D88530BDA4664C5386B34FC8 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03D97ECED84E4C63883AEC27 /* Debug */,
+				B12D6721F8D14293AF56D3DB /* Release */,
+				B40E5C66CAED42FFA56C583B /* MinSizeRel */,
+				A90B315E0B27436891446918 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E0455B956C714C8C838B25B3 /* Build configuration list for PBXProject "libmimalloc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B855D2D0A77418EBE0E35F1 /* Debug */,
+				96D461A88D464F55A633E10B /* Release */,
+				C47DB05B33BF430A93CD8BED /* MinSizeRel */,
+				FC8FCD163AF84D339A517C76 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E86A7B57CB974B4283D7D1C1 /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59DA20F0EBD34AF4853EF148 /* Debug */,
+				CE64702E628E4D2295DDA0B5 /* Release */,
+				F263F7AAEAF5404287EA2F4D /* MinSizeRel */,
+				F620B98D4C7D4A7DACBFD8B5 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F122E5C6B09E43269568C568 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				300D26013D5248659FBCFC13 /* Debug */,
+				D3E951DD0E7A492E927477CE /* Release */,
+				0B45EE5C8B4B44D39348FEE8 /* MinSizeRel */,
+				D8E2F36005784AB69F6818B4 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FBDBBDE4342A44EA829E27AA /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93B73F6376C14534820CCB68 /* Debug */,
+				2A487768F7BA4D39BDAFE340 /* Release */,
+				2106BBCA0EB844CA892DD573 /* MinSizeRel */,
+				5AA3EB6C842A4EC6A140957F /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8223CA49F66F4A6BB7842DFF /* Project object */;
+}

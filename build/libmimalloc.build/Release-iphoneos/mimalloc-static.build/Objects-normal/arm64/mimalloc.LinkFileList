@@ -1,0 +1,15 @@
+/Users/aligame/Desktop/wcode/mimalloc/build/libmimalloc.build/Release-iphoneos/mimalloc-static.build/Objects-normal/arm64/alloc-aligned.o
+/Users/aligame/Desktop/wcode/mimalloc/build/libmimalloc.build/Release-iphoneos/mimalloc-static.build/Objects-normal/arm64/alloc-override-osx.o
+/Users/aligame/Desktop/wcode/mimalloc/build/libmimalloc.build/Release-iphoneos/mimalloc-static.build/Objects-normal/arm64/alloc-posix.o
+/Users/aligame/Desktop/wcode/mimalloc/build/libmimalloc.build/Release-iphoneos/mimalloc-static.build/Objects-normal/arm64/alloc.o
+/Users/aligame/Desktop/wcode/mimalloc/build/libmimalloc.build/Release-iphoneos/mimalloc-static.build/Objects-normal/arm64/arena.o
+/Users/aligame/Desktop/wcode/mimalloc/build/libmimalloc.build/Release-iphoneos/mimalloc-static.build/Objects-normal/arm64/bitmap.o
+/Users/aligame/Desktop/wcode/mimalloc/build/libmimalloc.build/Release-iphoneos/mimalloc-static.build/Objects-normal/arm64/heap.o
+/Users/aligame/Desktop/wcode/mimalloc/build/libmimalloc.build/Release-iphoneos/mimalloc-static.build/Objects-normal/arm64/init.o
+/Users/aligame/Desktop/wcode/mimalloc/build/libmimalloc.build/Release-iphoneos/mimalloc-static.build/Objects-normal/arm64/options.o
+/Users/aligame/Desktop/wcode/mimalloc/build/libmimalloc.build/Release-iphoneos/mimalloc-static.build/Objects-normal/arm64/os.o
+/Users/aligame/Desktop/wcode/mimalloc/build/libmimalloc.build/Release-iphoneos/mimalloc-static.build/Objects-normal/arm64/page.o
+/Users/aligame/Desktop/wcode/mimalloc/build/libmimalloc.build/Release-iphoneos/mimalloc-static.build/Objects-normal/arm64/random.o
+/Users/aligame/Desktop/wcode/mimalloc/build/libmimalloc.build/Release-iphoneos/mimalloc-static.build/Objects-normal/arm64/region.o
+/Users/aligame/Desktop/wcode/mimalloc/build/libmimalloc.build/Release-iphoneos/mimalloc-static.build/Objects-normal/arm64/segment.o
+/Users/aligame/Desktop/wcode/mimalloc/build/libmimalloc.build/Release-iphoneos/mimalloc-static.build/Objects-normal/arm64/stats.o
