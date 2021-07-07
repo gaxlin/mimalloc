@@ -1,9 +1,0 @@
-/Users/aligame/Desktop/wcode/mimalloc/build/CMakeFiles/mimalloc-test-stress.dir
-/Users/aligame/Desktop/wcode/mimalloc/build/CMakeFiles/install.dir
-/Users/aligame/Desktop/wcode/mimalloc/build/CMakeFiles/mimalloc-obj.dir
-/Users/aligame/Desktop/wcode/mimalloc/build/CMakeFiles/RUN_TESTS.dir
-/Users/aligame/Desktop/wcode/mimalloc/build/CMakeFiles/mimalloc-static.dir
-/Users/aligame/Desktop/wcode/mimalloc/build/CMakeFiles/mimalloc-test-api.dir
-/Users/aligame/Desktop/wcode/mimalloc/build/CMakeFiles/mimalloc.dir
-/Users/aligame/Desktop/wcode/mimalloc/build/CMakeFiles/ALL_BUILD.dir
-/Users/aligame/Desktop/wcode/mimalloc/build/CMakeFiles/ZERO_CHECK.dir
